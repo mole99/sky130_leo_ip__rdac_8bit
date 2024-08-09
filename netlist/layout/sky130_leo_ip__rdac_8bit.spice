@@ -1,0 +1,36 @@
+* NGSPICE file created from sky130_leo_ip__rdac_8bit.ext - technology: sky130A
+
+.subckt res_poly a_n141_4996# a_n141_n5432# VSUBS
+X0 a_n141_4996# a_n141_n5432# VSUBS sky130_fd_pr__res_high_po_1p41 l=50.12
+.ends
+
+.subckt sky130_leo_ip__rdac_8bit D0 OUT D1 D2 D3 D4 D5 D6 D7 VGND
+Xres_poly_0 VGND VGND VGND res_poly
+Xres_poly_1 D7 m1_9176_499# VGND res_poly
+Xres_poly_2 OUT m1_9176_499# VGND res_poly
+Xres_poly_3 OUT m1_7728_10930# VGND res_poly
+Xres_poly_4 D6 m1_8090_499# VGND res_poly
+Xres_poly_5 m1_7728_10930# m1_8090_499# VGND res_poly
+Xres_poly_6 m1_7728_10930# m1_6642_10930# VGND res_poly
+Xres_poly_7 D5 m1_7004_499# VGND res_poly
+Xres_poly_9 m1_6642_10930# m1_5556_10930# VGND res_poly
+Xres_poly_8 m1_6642_10930# m1_7004_499# VGND res_poly
+Xres_poly_10 D4 m1_5918_499# VGND res_poly
+Xres_poly_20 m1_2298_10930# m1_2660_499# VGND res_poly
+Xres_poly_21 m1_2298_10930# m1_1212_10930# VGND res_poly
+Xres_poly_11 m1_5556_10930# m1_5918_499# VGND res_poly
+Xres_poly_22 VGND m1_1574_499# VGND res_poly
+Xres_poly_12 m1_5556_10930# m1_4470_10930# VGND res_poly
+Xres_poly_23 m1_1212_10930# m1_1574_499# VGND res_poly
+Xres_poly_13 D3 m1_4832_499# VGND res_poly
+Xres_poly_24 m1_1212_10930# m1_850_499# VGND res_poly
+Xres_poly_14 m1_4470_10930# m1_4832_499# VGND res_poly
+Xres_poly_25 D0 m1_850_499# VGND res_poly
+Xres_poly_15 m1_4470_10930# m1_3384_10930# VGND res_poly
+Xres_poly_26 VGND VGND VGND res_poly
+Xres_poly_16 D2 m1_3746_499# VGND res_poly
+Xres_poly_17 m1_3384_10930# m1_3746_499# VGND res_poly
+Xres_poly_18 m1_3384_10930# m1_2298_10930# VGND res_poly
+Xres_poly_19 D1 m1_2660_499# VGND res_poly
+.ends
+

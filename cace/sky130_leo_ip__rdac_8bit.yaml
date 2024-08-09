@@ -1,0 +1,139 @@
+name:           sky130_leo_ip__rdac_8bit
+description:    A simple 8-bit R2R DAC
+PDK:            sky130A
+
+cace_format:    5.0
+
+authorship:
+  designer:         Leo Moser
+  creation_date:    July 29, 2024
+  license:          Apache 2.0
+
+paths:
+  root:             ..
+  schematic:        xschem
+  layout:           gds
+  netlist:          netlist
+  documentation:    docs
+
+pins:
+  VGND:
+    description: Ground
+    type: ground
+    direction: inout
+  D0:
+    description: Digital input 0
+    type: signal
+    direction: input
+  D1:
+    description: Digital input 1
+    type: signal
+    direction: input
+  D2:
+    description: Digital input 2
+    type: signal
+    direction: input
+  D3:
+    description: Digital input 3
+    type: signal
+    direction: input
+  D4:
+    description: Digital input 4
+    type: signal
+    direction: input
+  D5:
+    description: Digital input 5
+    type: signal
+    direction: input
+  D6:
+    description: Digital input 6
+    type: signal
+    direction: input
+  D7:
+    description: Digital input 7
+    type: signal
+    direction: input
+  OUT:
+    description: Output of the DAC
+    type: signal
+    direction: output
+
+parameters:
+  area:
+    description: Total circuit layout area
+    display: Area
+    unit: µm²
+    spec:
+      maximum:
+        value: any
+    tool:
+      magic_area
+
+  width:
+    description: Total circuit layout width
+    display: Width
+    unit: µm
+    spec:
+      maximum:
+        value: any
+    tool:
+      magic_width
+
+  height:
+    description: Total circuit layout height
+    display: Height
+    unit: µm
+    spec:
+      maximum:
+        value: any
+    tool:
+      magic_height
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      maximum:
+        value: 0
+    tool:
+      magic_drc:
+        gds_flatten: True
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      maximum:
+        value: 0
+    tool:
+      netgen_lvs
+
+  klayout_drc_feol:
+    description: KLayout DRC feol
+    display: KLayout DRC feol
+    spec:
+      maximum:
+        value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true']
+
+  klayout_drc_beol:
+    description: KLayout DRC beol
+    display: KLayout DRC beol
+    spec:
+      maximum:
+        value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'beol=true']
+
+  klayout_drc_full:
+    description: KLayout DRC full
+    display: KLayout DRC full
+    spec:
+      maximum:
+        value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']
