@@ -2,7 +2,7 @@ name:           sky130_leo_ip__rdac_8bit
 description:    A simple 8-bit R2R DAC
 PDK:            sky130A
 
-cace_format:    5.0
+cace_format:    5.2
 
 authorship:
   designer:         Leo Moser
@@ -59,52 +59,47 @@ pins:
     direction: output
 
 parameters:
-  area:
-    description: Total circuit layout area
-    display: Area
-    unit: µm²
+  magic_area:
     spec:
-      maximum:
-        value: any
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: any
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
     tool:
       magic_area
-
-  width:
-    description: Total circuit layout width
-    display: Width
-    unit: µm
-    spec:
-      maximum:
-        value: any
-    tool:
-      magic_width
-
-  height:
-    description: Total circuit layout height
-    display: Height
-    unit: µm
-    spec:
-      maximum:
-        value: any
-    tool:
-      magic_height
 
   magic_drc:
     description: Magic DRC
     display: Magic DRC
     spec:
-      maximum:
-        value: 0
+      drc_errors:
+        maximum:
+          value: 0
     tool:
       magic_drc:
-        gds_flatten: True
+        gds_flatten: true
 
   netgen_lvs:
     description: Netgen LVS
     display: Netgen LVS
     spec:
-      maximum:
-        value: 0
+      lvs_errors:
+        maximum:
+          value: 0
     tool:
       netgen_lvs
 
@@ -112,8 +107,9 @@ parameters:
     description: KLayout DRC feol
     display: KLayout DRC feol
     spec:
-      maximum:
-        value: 0
+      drc_errors:
+        maximum:
+          value: 0
     tool:
         klayout_drc:
             args: ['-rd', 'feol=true']
@@ -122,8 +118,9 @@ parameters:
     description: KLayout DRC beol
     display: KLayout DRC beol
     spec:
-      maximum:
-        value: 0
+      drc_errors:
+        maximum:
+          value: 0
     tool:
         klayout_drc:
             args: ['-rd', 'beol=true']
@@ -132,8 +129,9 @@ parameters:
     description: KLayout DRC full
     display: KLayout DRC full
     spec:
-      maximum:
-        value: 0
+      drc_errors:
+        maximum:
+          value: 0
     tool:
         klayout_drc:
             args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']

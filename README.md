@@ -1,11 +1,12 @@
-# sky130_leo_ip__rdac_8bit
+# sky130_leo_ip__rdac_8bit ![](../../workflows/cace/badge.svg)
 
 A simple 8-bit R2R DAC
 
 > [!IMPORTANT]  
 > This is a very simple design and should only be used as a reference.
 
-[Design Documentation](docs/sky130_leo_ip__rdac_8bit.md)
+- [Documentation](docs/sky130_leo_ip__rdac_8bit.md)
+- [Characterization](docs/sky130_leo_ip__rdac_8bit_rcx.md)
 
 ## CACE
 
